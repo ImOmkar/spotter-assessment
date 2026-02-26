@@ -165,7 +165,9 @@ import {
   
         {/* Stops */}
         {showStops &&
-        stops.map((stop, index) => (
+        stops.filter(
+          s => Number.isFinite(s.lat) && Number.isFinite(s.lng)
+        ).map((stop, index) => (
             <Marker
             key={index}
             position={[stop.lat, stop.lng]}
