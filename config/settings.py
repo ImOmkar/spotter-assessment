@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uylh1sd4i%u96%=c%1wh=q4o5g!ag8ux8mf)9(dzl0x0_l3pr*'
-
+# SECRET_KEY = 'django-insecure-uylh1sd4i%u96%=c%1wh=q4o5g!ag8ux8mf)9(dzl0x0_l3pr*'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',"whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,11 +129,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 # EXTRA CONFIG
 
 CORS_ALLOW_ALL_ORIGINS = True
-
-ORS_API_KEY = os.getenv("ORS_API_KEY")
+ORS_API_KEY = os.environ.get("ORS_API_KEY")
+# ORS_API_KEY = os.getenv("ORS_API_KEY") 
