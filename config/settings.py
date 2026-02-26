@@ -31,8 +31,11 @@ SECRET_KEY = 'django-insecure-uylh1sd4i%u96%=c%1wh=q4o5g!ag8ux8mf)9(dzl0x0_l3pr*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://spotter-assessment-oz1m.onrender.com",
+]
 
 # Application definition
 
