@@ -4,12 +4,12 @@ import { useState } from "react";
 export default function TripPanel({ onPlan }) {
 
   const [form, setForm] = useState({
-    current_lat: "",
-    current_lng: "",
-    pickup_lat: "",
-    pickup_lng: "",
-    drop_lat: "",
-    drop_lng: "",
+    current_lat: 47.6062,
+    current_lng: -122.3321,
+    pickup_lat: 45.5152,
+    pickup_lng: -122.6784,
+    drop_lat: 25.7617,
+    drop_lng: -80.1918,
     current_cycle_hours: 20,
   });
 
@@ -48,7 +48,8 @@ export default function TripPanel({ onPlan }) {
         name="current_lat"
         placeholder="Current Latitude"
         onChange={handleChange}
-        defaultValue="47.6062"
+        value={form.current_lat}
+        // defaultValue="47.6062"
         className="w-full border p-2 rounded"
         />
 
@@ -56,7 +57,8 @@ export default function TripPanel({ onPlan }) {
         name="current_lng"
         placeholder="Current Longitude"
         onChange={handleChange}
-        defaultValue="-122.3321"
+        value={form.current_lng}
+        // defaultValue="-122.3321"
         className="w-full border p-2 rounded"
         />
 
@@ -64,7 +66,8 @@ export default function TripPanel({ onPlan }) {
         name="pickup_lat"
         placeholder="Pickup Latitude"
         onChange={handleChange}
-        defaultValue="45.5152"
+        value={form.pickup_lat}
+        // defaultValue="45.5152"
         className="w-full border p-2 rounded"
       />
 
@@ -72,7 +75,8 @@ export default function TripPanel({ onPlan }) {
         name="pickup_lng"
         placeholder="Pickup Longitude"
         onChange={handleChange}
-        defaultValue="-122.6784"
+        value={form.pickup_lng}
+        // defaultValue="-122.6784"
         className="w-full border p-2 rounded"
       />
 
@@ -80,7 +84,8 @@ export default function TripPanel({ onPlan }) {
         name="drop_lat"
         placeholder="Drop Latitude"
         onChange={handleChange}
-        defaultValue="25.7617"
+        value={form.drop_lat}
+        // defaultValue="25.7617"
         className="w-full border p-2 rounded"
       />
 
@@ -88,7 +93,8 @@ export default function TripPanel({ onPlan }) {
         name="drop_lng"
         placeholder="Drop Longitude"
         onChange={handleChange}
-        defaultValue="-80.1918"
+        value={form.drop_lng}
+        // defaultValue="-80.1918"
         className="w-full border p-2 rounded"
       />
 
@@ -96,7 +102,8 @@ export default function TripPanel({ onPlan }) {
         name="current_cycle_hours"
         placeholder="Cycle Hours Used"
         onChange={handleChange}
-        defaultValue={20}
+        value={form.current_cycle_hours}
+        // defaultValue={20}
         className="w-full border p-2 rounded"
       />
 
