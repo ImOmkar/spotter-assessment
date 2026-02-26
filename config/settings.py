@@ -34,7 +34,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    "https://spotter-assessment-rouge.vercel.app",
+    "https://spotter-assessment-rouge.vercel.app","https://spotter-assessment-oz1m.onrender.com"
 ]
 
 # Application definition
