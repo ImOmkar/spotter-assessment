@@ -24,7 +24,7 @@ export default function TripPanel({ onPlan }) {
     onPlan({
       ...form,
       current_lat: Number(form.current_lat),
-    current_lng: Number(form.current_lng),
+      current_lng: Number(form.current_lng),
       pickup_lat: Number(form.pickup_lat),
       pickup_lng: Number(form.pickup_lng),
       drop_lat: Number(form.drop_lat),
@@ -48,6 +48,7 @@ export default function TripPanel({ onPlan }) {
         name="current_lat"
         placeholder="Current Latitude"
         onChange={handleChange}
+        defaultValue="47.6062"
         className="w-full border p-2 rounded"
         />
 
@@ -55,6 +56,7 @@ export default function TripPanel({ onPlan }) {
         name="current_lng"
         placeholder="Current Longitude"
         onChange={handleChange}
+        defaultValue="-122.3321"
         className="w-full border p-2 rounded"
         />
 
@@ -62,6 +64,7 @@ export default function TripPanel({ onPlan }) {
         name="pickup_lat"
         placeholder="Pickup Latitude"
         onChange={handleChange}
+        defaultValue="45.5152"
         className="w-full border p-2 rounded"
       />
 
@@ -69,6 +72,7 @@ export default function TripPanel({ onPlan }) {
         name="pickup_lng"
         placeholder="Pickup Longitude"
         onChange={handleChange}
+        defaultValue="-122.6784"
         className="w-full border p-2 rounded"
       />
 
@@ -76,6 +80,7 @@ export default function TripPanel({ onPlan }) {
         name="drop_lat"
         placeholder="Drop Latitude"
         onChange={handleChange}
+        defaultValue="25.7617"
         className="w-full border p-2 rounded"
       />
 
@@ -83,6 +88,7 @@ export default function TripPanel({ onPlan }) {
         name="drop_lng"
         placeholder="Drop Longitude"
         onChange={handleChange}
+        defaultValue="-80.1918"
         className="w-full border p-2 rounded"
       />
 
