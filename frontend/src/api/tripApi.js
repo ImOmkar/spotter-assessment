@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// const API = "https://spotterassessment.pythonanywhere.com/api"; 
+const API = "https://spotterassessment.pythonanywhere.com/api"; 
 
-const API = "http://127.0.0.1:8000/api";
+// const API = "http://127.0.0.1:8000/api";
 
 
 export const planTrip = async (tripData) => {
