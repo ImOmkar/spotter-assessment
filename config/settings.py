@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
     "https://spotter-assessment-oz1m.onrender.com", 
+    "http://localhost:5173"
 
 ]
 
