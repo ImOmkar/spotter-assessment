@@ -56,7 +56,7 @@ class HOSEngine:
             # Off duty midnight → 6 AM
             timeline.append(Event("off_duty", 0, 6))
 
-            # ✅ Pickup (changed label only)
+            # Pickup
             if day == 1:
                 timeline.append(
                     Event("pickup", current_time, current_time + self.PICKUP_DURATION)
@@ -83,7 +83,7 @@ class HOSEngine:
                     break_taken = True
                     continue
 
-                # ✅ Fuel stop (changed label only)
+                # Fuel stop
                 if self.fuel_miles_counter >= self.FUEL_EVERY_MILES:
                     timeline.append(
                         Event("fuel", current_time, current_time + self.FUEL_DURATION)
@@ -120,7 +120,7 @@ class HOSEngine:
                 self.miles_remaining -= miles_driven
                 self.fuel_miles_counter += miles_driven
 
-            # ✅ Dropoff (changed label only)
+            # Dropoff 
             if self.miles_remaining <= 0:
                 timeline.append(
                     Event("dropoff", current_time, current_time + self.DROPOFF_DURATION)
