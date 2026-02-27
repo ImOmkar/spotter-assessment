@@ -80,7 +80,12 @@ class RouteService:
             f"?overview=full&geometries=geojson"
         )
 
+        print("hitting this URL", url)
+
         response = requests.get(url, timeout=10)
+
+        print("response from osrm", response)
+        
         response.raise_for_status()
 
         data = response.json()
