@@ -12,7 +12,7 @@ Calculates the route between pickup and dropoff
 
 Applies FMCSA HOS rules
 
-Generates daily log sheets (multiple days if required)
+Generates daily log sheets 
 
 Draws ELD graph grids programmatically
 
@@ -24,7 +24,7 @@ The system simulates a property-carrying interstate driver under a 70-hour / 8-d
 
 The application accepts the following inputs:
 
-Current location (latitude & longitude) – optional
+Current location (latitude & longitude) - optional
 
 Pickup location (latitude & longitude)
 
@@ -108,7 +108,7 @@ Pickup event occurs (1 hour on-duty, first day only).
 
 Driving begins.
 
-After 8 hours of cumulative driving → 30-minute break inserted.
+After 8 hours of cumulative driving -> 30-minute break inserted.
 
 Fuel stops inserted automatically every 1,000 miles.
 
@@ -132,13 +132,13 @@ The system generates multiple daily log sheets automatically when required.
 
 The Django backend is structured with service-based separation of responsibilities:
 
-route_service.py → Handles external routing API call and coordinate decoding
+route_service.py -> Handles external routing API call and coordinate decoding
 
-hos_engine.py → Core FMCSA simulation logic
+hos_engine.py -> Core FMCSA simulation logic
 
-stop_service.py → Generates map markers for pickup, fuel, break, and dropoff
+stop_service.py -> Generates map markers for pickup, fuel, break, and dropoff
 
-hos_validator.py → Validates compliance with 11-hour, 14-hour, and 70-hour rules
+hos_validator.py -> Validates compliance with 11-hour, 14-hour, and 70-hour rules
 
 API Endpoint
 
@@ -219,14 +219,10 @@ npm run dev
 
 🌍 Deployment
 
-Frontend can be deployed on Vercel.
-Backend can be deployed on Render or similar cloud provider.
+Frontend is deployed on Vercel.
+Backend is deployed on Pythonanywere
 
 The hosted version is included in submission.
-
-🎥 Loom Walkthrough
-
-A 3–5 minute Loom video explains:
 
 Architecture decisions
 
@@ -241,7 +237,7 @@ Map integration
 Assumptions made
 
 
-📌 Design Decisions
+Design Decisions
 
 Coordinates used instead of address search to keep routing deterministic.
 
@@ -255,7 +251,7 @@ Validation added to prevent NaN coordinate errors.
 
 UI designed to be clean and professional while focusing on core functionality.
 
-✅ Completion Status
+Completion Status
 
 This implementation satisfies:
 
@@ -305,7 +301,7 @@ The objective of this application is to:
 - Accept trip details as input
 - Calculate the route between pickup and dropoff
 - Apply FMCSA HOS rules
-- Generate daily log sheets (multi-day if required)
+- Generate daily log sheets
 - Draw ELD graph grids programmatically
 - Display route, stops, and rest periods on a map
 
@@ -315,7 +311,7 @@ The objective of this application is to:
 
 The application accepts:
 
-- Current location (latitude & longitude) — optional
+- Current location (latitude & longitude) - optional
 - Pickup location (latitude & longitude)
 - Dropoff location (latitude & longitude)
 - Current Cycle Used (Hours)
@@ -337,7 +333,7 @@ If current location is not provided, the driver starts at pickup.
 - Full route drawn on interactive map
 - Pickup marker
 - Dropoff marker
-- Fuel stop markers (≥ every 1,000 miles)
+- Fuel stop markers (>= every 1,000 miles)
 - 30-minute break markers
 - Animated route progression
 - Route highlighting during log hover
@@ -387,7 +383,7 @@ OR
 1. Driver begins day at 06:00 after overnight off-duty
 2. Pickup event occurs (1 hour on-duty, first day only)
 3. Driving begins
-4. After 8 hours cumulative driving → 30-minute break inserted
+4. After 8 hours cumulative driving -> 30-minute break inserted
 5. Fuel stops inserted automatically every 1,000 miles
 6. Driving ends when:
    - 11 driving hours reached
@@ -487,23 +483,10 @@ npm run dev
 
 ## Deployment
 
-- Frontend → Vercel
-- Backend → Render (or similar cloud provider)
+- Frontend -> Vercel
+- Backend -> Pythonanywhere
 
 Hosted version included in submission.
-
----
-
-## Loom Walkthrough
-
-The 3–5 minute Loom video explains:
-
-- Architecture decisions
-- HOS rule implementation
-- Multi-day log generation
-- Compliance validation
-- Map integration
-- Assumptions made
 
 ---
 
